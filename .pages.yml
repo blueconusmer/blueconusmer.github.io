@@ -1,0 +1,91 @@
+media:
+  input: media
+  output: /media
+  extensions: [jpg, jpeg, png, webp, gif, svg]
+content:
+  - name: posts
+    label: 글 관리
+    type: collection
+    path: content
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{hour}{minute}{second}-{primary}.md"
+    subfolders: false
+    view:
+      primary: title
+      fields: [title, date, category, draft]
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: 제목
+        type: string
+        required: true
+      - name: date
+        label: 작성일
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: category
+        label: 카테고리
+        type: select
+        required: true
+        default: 개발 학습
+        options:
+          values: [개발 학습, 업무 회고, 커리어·인사이트]
+      - name: tags
+        label: 태그 (쉼표로 구분)
+        type: string
+      - name: description
+        label: 목록에 표시할 요약
+        type: text
+        required: true
+      - name: draft
+        label: 초안 (켜면 블로그 목록에 표시하지 않음)
+        type: boolean
+        default: true
+      - name: example
+        label: 예시 글 표시
+        type: boolean
+        default: false
+      - name: body
+        label: 본문
+        type: rich-text
+  - name: settings
+    label: 블로그 소개
+    type: file
+    path: site.json
+    format: json
+    fields:
+      - name: title
+        label: 블로그 이름
+        type: string
+      - name: author
+        label: 작성자
+        type: string
+      - name: url
+        label: 블로그 주소
+        type: string
+      - name: description
+        label: 한 줄 소개
+        type: string
+      - name: intro
+        label: 자세한 소개
+        type: text
+      - name: github
+        label: GitHub 프로필
+        type: string
+      - name: projects
+        label: 프로젝트
+        type: object
+        list: true
+        fields:
+          - name: title
+            type: string
+          - name: description
+            type: text
+          - name: url
+            type: string
+          - name: tags
+            type: string
+            list: true

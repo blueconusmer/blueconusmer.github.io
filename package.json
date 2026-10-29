@@ -2,6 +2,14 @@
   "name": "kobe-dev-notes",
   "private": true,
   "type": "module",
-  "scripts": { "build": "node build.mjs", "dev": "node serve.mjs" },
-  "engines": { "node": ">=22" }
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node serve.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "yaml": "^2.9.1"
+  }
 }
