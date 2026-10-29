@@ -1,0 +1,11 @@
+{
+  "title": "Kobe’s Dev Notes",
+  "author": "Kobe",
+  "url": "https://blueconusmer.github.io",
+  "description": "배운 것을 이해하고, 이해한 것을 기록합니다.",
+  "intro": "Java · Spring · Python을 공부하며 개발의 기본기를 쌓고 있습니다. 문제를 해결하는 과정과 일하며 얻은 생각을 미래의 나를 위해 남깁니다.",
+  "github": "https://github.com/blueconusmer",
+  "projects": [
+    { "title": "프로젝트 기록을 준비하고 있어요", "description": "직접 만든 서비스의 문제 정의, 설계 결정, 배운 점을 이곳에 정리할 예정입니다.", "tags": ["Coming soon"] }
+  ]
+}
